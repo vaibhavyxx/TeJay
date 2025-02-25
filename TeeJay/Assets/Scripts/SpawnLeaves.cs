@@ -49,7 +49,7 @@ public class SpawnLeaves : MonoBehaviour
     void Update()
     {
         time = Time.deltaTime;
-        Debug.Log("Time: "+ time);
+        //Debug.Log("Time: "+ time);
         if(time > deltaTime && counter < totalMeshes)
         {
             time = 0.0f;                                //resets time
