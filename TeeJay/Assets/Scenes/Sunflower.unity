@@ -2250,6 +2250,12 @@ PlayableDirector:
     value: {fileID: 8679558718791299793}
   - key: {fileID: 2504181021848821506, guid: c0fc7d36d3ae0fa42bd82b76caf2364e, type: 2}
     value: {fileID: 8371810564956766550}
+  - key: {fileID: 985645289617815760, guid: c0fc7d36d3ae0fa42bd82b76caf2364e, type: 2}
+    value: {fileID: 8823154891205554061}
+  - key: {fileID: 5881391184209395698, guid: c0fc7d36d3ae0fa42bd82b76caf2364e, type: 2}
+    value: {fileID: 9100903093084673088}
+  - key: {fileID: 5009600446242119310, guid: c0fc7d36d3ae0fa42bd82b76caf2364e, type: 2}
+    value: {fileID: 8695053352845619909}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1275559496
@@ -3422,6 +3428,7 @@ GameObject:
   - component: {fileID: 9100903093084673087}
   - component: {fileID: 4006809651925104964}
   - component: {fileID: 1526765090720537808}
+  - component: {fileID: 9100903093084673088}
   m_Layer: 0
   m_Name: Sunflower Petal 12
   m_TagString: Untagged
@@ -3574,9 +3581,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8823154891205554060}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.512066, y: 18.812557, z: -22.423367}
-  m_LocalScale: {x: 0.22486377, y: 1.4926677, z: 5.631387}
+  m_LocalScale: {x: 0, y: 1.4926677, z: 5.631387}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652664119049}
@@ -3697,6 +3704,7 @@ GameObject:
   - component: {fileID: 8695053352845619908}
   - component: {fileID: 5338430186999304886}
   - component: {fileID: 5423252559494673639}
+  - component: {fileID: 8695053352845619909}
   m_Layer: 0
   m_Name: Sunflower Petal 13
   m_TagString: Untagged
@@ -4596,11 +4604,33 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 25.439308, z: -66.18218}
-  m_LocalScale: {x: 0.41327924, y: 1.8406458, z: 5.7288074}
+  m_LocalScale: {x: 0, y: 1.8406458, z: 5.7288074}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652664119049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8695053352845619909
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5214792441183370258}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!23 &8730303016462111797
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4679,6 +4709,7 @@ GameObject:
   - component: {fileID: 4576826799843654890}
   - component: {fileID: 222610863342966334}
   - component: {fileID: 1050135704416450883}
+  - component: {fileID: 8823154891205554061}
   m_Layer: 0
   m_Name: Sunflower Petal 11
   m_TagString: Untagged
@@ -4686,6 +4717,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &8823154891205554061
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8823154891205554060}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &9100903093084673087
 Transform:
   m_ObjectHideFlags: 0
@@ -4696,11 +4749,33 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 28.90931, z: -30.190126}
-  m_LocalScale: {x: 0.96765226, y: 1.2552063, z: 6.4858665}
+  m_LocalScale: {x: 0, y: 1.2552063, z: 6.4858665}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652664119049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &9100903093084673088
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3691651456241456600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &9179017852987642837
 Transform:
   m_ObjectHideFlags: 0
