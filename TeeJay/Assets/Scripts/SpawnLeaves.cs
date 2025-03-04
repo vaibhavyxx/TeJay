@@ -25,7 +25,7 @@ public class SpawnLeaves : MonoBehaviour
         //meshRenderer = GetComponent<MeshRenderer>();
         meshWidth = meshObject.GetComponent<MeshRenderer>().bounds.size.x;
         totalMeshes = Mathf.RoundToInt(2* Mathf.PI * radius / meshWidth);
-        deltaAngle = 2* Mathf.PI/ totalMeshes;
+        deltaAngle = 2* Mathf.PI/ 6;
         coordinates = new Vector3[totalMeshes];
 
         //totalMeshes = int.Parse 2 * Mathf.PI * radius;
@@ -55,8 +55,8 @@ public class SpawnLeaves : MonoBehaviour
             time = 0.0f;                                //resets time
             float angle = counter * deltaAngle;
             Vector3 coordinate = new Vector3(radius * Mathf.Cos(angle),
-                counter, radius * Mathf.Sin(angle));
-            makeObject(coordinate, Quaternion.identity);
+                0, radius * Mathf.Sin(angle));
+            makeObject(coordinate, Quaternion.Euler(angle * counter, angle * counter, angle * counter));
             counter++;
         }
         
