@@ -7,9 +7,9 @@ using UnityEngine.InputSystem;
 public class PlayerMove : MonoBehaviour
 {
     //Movement of the player body.
-    [SerializeField] float walkSpeed = 10f;
+    [SerializeField] float walkSpeed = 15f;
     //How high we allow the player to jump
-    [SerializeField] float jumpPower = 10f;
+    [SerializeField] float jumpPower = 15f;
     Vector2 moveInput;
     Rigidbody myRigidbody;
     //A check to see if a player has landed on a platform with the tag "grounded"
