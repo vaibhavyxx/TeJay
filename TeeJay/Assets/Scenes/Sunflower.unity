@@ -221,12 +221,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262396191}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 113.9, y: 125.5, z: -13.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.200005, y: -1.4000015, z: 0}
   m_LocalScale: {x: 6, y: 2.376976, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 455337448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &262396196
 Animator:
@@ -547,6 +547,40 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &455337447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 455337448}
+  m_Layer: 0
+  m_Name: Cherry Petals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &455337448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455337447}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 132.1, y: 126.9, z: -13.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 469591513}
+  - {fileID: 262396195}
+  - {fileID: 1899551276}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &469591509
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,12 +683,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469591509}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 120.1, y: 135, z: -13.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12, y: 8.099998, z: 0}
   m_LocalScale: {x: 6, y: 2.3769755, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 455337448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &469591514
 Animator:
@@ -730,7 +764,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1063,11 +1097,11 @@ Transform:
   m_GameObject: {fileID: 1899551272}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.34104744, w: 0.94004613}
-  m_LocalPosition: {x: 132.1, y: 126.9, z: -13.6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6, y: 2.376976, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 455337448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -39.881}
 --- !u!95 &1899551277
 Animator:
@@ -3321,9 +3355,7 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 2089123404}
   - {fileID: 1275559496}
-  - {fileID: 469591513}
-  - {fileID: 262396195}
-  - {fileID: 1899551276}
+  - {fileID: 455337448}
   - {fileID: 543450652664119049}
   - {fileID: 970727818605040128}
   - {fileID: 1990779911}
