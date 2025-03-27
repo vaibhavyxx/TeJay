@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 69343976}
   m_Layer: 0
   m_Name: Terrain_(1000.00, 0.00, 0.00)
-  m_TagString: Untagged
+  m_TagString: Grounded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -225,8 +225,8 @@ GameObject:
   - component: {fileID: 133353842}
   - component: {fileID: 133353846}
   - component: {fileID: 133353845}
-  - component: {fileID: 133353844}
   - component: {fileID: 133353847}
+  - component: {fileID: 133353848}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -304,21 +304,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133353839}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &133353844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133353839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f9dc91c84e580843b750b0092bf7923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minViewDistance: 25
-  playerBody: {fileID: 682477059}
-  mouseSensitivity: 100
 --- !u!114 &133353845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,8 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4dfb69a484e0f4db56ec00bd3c3ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 15
-  jumpPower: 15
+  walkSpeed: 2500
+  jumpPower: 1000
 --- !u!54 &133353846
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -466,6 +451,29 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!136 &133353848
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133353839}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Height: 10
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &168175517
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +834,7 @@ GameObject:
   - component: {fileID: 361964125}
   m_Layer: 0
   m_Name: Terrain_(0.00, 0.00, -1000.00)
-  m_TagString: Untagged
+  m_TagString: Grounded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1090,7 +1098,6 @@ GameObject:
   - component: {fileID: 573575525}
   - component: {fileID: 573575528}
   - component: {fileID: 573575527}
-  - component: {fileID: 573575526}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1113,29 +1120,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 133353840}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &573575526
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573575524}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &573575527
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1234,7 +1218,7 @@ GameObject:
   - component: {fileID: 626668612}
   m_Layer: 0
   m_Name: Terrain_(0.00, 0.00, 1000.00)
-  m_TagString: Untagged
+  m_TagString: Grounded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1361,13 +1345,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682477058}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f9dc91c84e580843b750b0092bf7923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minViewDistance: 25
-  playerBody: {fileID: 0}
+  playerBody: {fileID: 133353840}
   mouseSensitivity: 100
 --- !u!114 &682477062
 MonoBehaviour:
@@ -1485,7 +1469,7 @@ GameObject:
   - component: {fileID: 795928821}
   m_Layer: 0
   m_Name: Terrain_(-1000.00, 0.00, 1000.00)
-  m_TagString: Untagged
+  m_TagString: Grounded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2272,7 +2256,7 @@ GameObject:
   - component: {fileID: 1577086466}
   m_Layer: 0
   m_Name: Terrain_(-1000.00, 0.00, 0.00)
-  m_TagString: Untagged
+  m_TagString: Grounded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2473,7 +2457,7 @@ GameObject:
   - component: {fileID: 1780618299}
   m_Layer: 0
   m_Name: Terrain_(-1000.00, 0.00, -1000.00)
-  m_TagString: Untagged
+  m_TagString: Grounded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2883,7 +2867,7 @@ GameObject:
   - component: {fileID: 2112185832}
   m_Layer: 0
   m_Name: Terrain_(0.00, 0.00, 0.00)
-  m_TagString: Untagged
+  m_TagString: Grounded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

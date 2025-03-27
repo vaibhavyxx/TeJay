@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
     Vector2 moveInput;
     Rigidbody myRigidbody;
     //A check to see if a player has landed on a platform with the tag "grounded"
-    bool isGrounded = true;
+    bool isGrounded = false;
 
     void Start()
     {
@@ -40,10 +40,11 @@ public class PlayerMove : MonoBehaviour
     void Run()
     {
         Vector3 moveDirection = new Vector3(moveInput.x, 0f, moveInput.y).normalized;
-        Vector3 playerVelocity = moveDirection * walkSpeed;
+        Vector3 playerForce = moveDirection * walkSpeed;
         
         // Preserve Y velocity (gravity)
-        myRigidbody.linearVelocity = new Vector3(playerVelocity.x, myRigidbody.linearVelocity.y, playerVelocity.z);
+        // myRigidbody.linearVelocity = new Vector3(playerVelocity.x, myRigidbody.linearVelocity.y, playerVelocity.z);
+        myRigidbody.AddForce(playerForce, ForceMode.Force);
     }
 
     // Jump power for our player
@@ -54,8 +55,9 @@ public class PlayerMove : MonoBehaviour
     }
 
     // In order for the player to jump, the player must land on platform with the tage "Grounded". No infinite jumps.
-    void OnCollisionEnter(Collision collision) // Corrected function name
+    void OnCollisionStay(Collision collision) // Corrected function name
     {
+        
         if (collision.gameObject.CompareTag("Grounded")) // Make sure the ground has this tag
         {
             isGrounded = true;
