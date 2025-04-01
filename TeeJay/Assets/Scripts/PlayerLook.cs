@@ -10,7 +10,7 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] Transform playerBody; 
     public float mouseSensitivity = 100f;
 
-    float yRotation = 0f;
+    float xRotation = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     //When you click on the play screen, the cursor goes away so it won't disturb your viewing, click 'esc' to get the cursor back.
@@ -23,12 +23,19 @@ public class PlayerLook : MonoBehaviour
     // Now you rotate your view, look in all directions.
     void Update()
     {
+        //Gets values from X and Y 
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        yRotation -= mouseY;
-        yRotation = Mathf.Clamp(yRotation, -90f, minViewDistance);
-        transform.localRotation = Quaternion.Euler(yRotation, 0f, 0f);
+        //updates xRotation
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -minViewDistance, minViewDistance);
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(playerBody.transform.forward * mouseX); 
+    }
+
+    void onLook()
+    {
+
     }
 }
