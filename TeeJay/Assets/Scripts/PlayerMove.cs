@@ -15,10 +15,18 @@ public class PlayerMove : MonoBehaviour
     //A check to see if a player has landed on a platform with the tag "grounded"
     bool isGrounded = false;
 
+    //gravity
+    public float gravity = 100f;
+    float time = 0.0f;
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();
-        myRigidbody.freezeRotation = true; // Prevent unwanted rotation
+        //myRigidbody.freezeRotation = true; // Prevent unwanted rotation
+
+        //get current time
+        time = Time.time;
+
     }
 
     // Conditions for jumping, space bar to jump.
@@ -34,17 +42,20 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate() // Use FixedUpdate for physics calculations
     {
         Run();
+        ApplyGravity();
     }
 
     // Our movement of x and y axis.
     void Run()
     {
         Vector3 moveDirection = new Vector3(moveInput.x, 0f, moveInput.y).normalized;
-        Vector3 playerForce = moveDirection * walkSpeed;
-        
+        //Vector3 playerForce = moveDirection * walkSpeed;
+        Vector3 newVelocity = new Vector3(moveDirection.x * walkSpeed,
+            myRigidbody.linearVelocity.y, moveDirection.z * walkSpeed);
+        myRigidbody.linearVelocity = newVelocity;
         // Preserve Y velocity (gravity)
         // myRigidbody.linearVelocity = new Vector3(playerVelocity.x, myRigidbody.linearVelocity.y, playerVelocity.z);
-        myRigidbody.AddForce(playerForce, ForceMode.Force);
+        //myRigidbody.AddForce(playerForce, ForceMode.Force);
     }
 
     // Jump power for our player
@@ -67,5 +78,14 @@ public class PlayerMove : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+    }
+
+    //Ensures you fall properly
+    void ApplyGravity()
+    {
+        if(!isGrounded)
+        {
+            myRigidbody.AddForce(Vector3.down * (Physics.gravity.y * gravity), ForceMode.Acceleration);
+        }
     }
 }
