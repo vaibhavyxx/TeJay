@@ -43,7 +43,6 @@ public class PlayerMove : MonoBehaviour
     {
         //Changed it from forceMode to ensure gravity still works when rigidbody moves
         Vector3 moveDirection = (_cameraTransform.right * moveInput.x + _cameraTransform.forward * moveInput.y);//transform.up.normalized;
-            //new Vector3(moveInput.x, 0f, moveInput.y).normalized;
         Vector3 newVelocity = new Vector3(
             moveDirection.x * walkSpeed,
             myRigidbody.linearVelocity.y, 
