@@ -6,14 +6,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
-    //Movement of the player body.
     [SerializeField] float walkSpeed = 15f;
-    //How high we allow the player to jump
     [SerializeField] float jumpPower = 15f;
+    [SerializeField] Transform _cameraTransform;
     Vector2 moveInput;
     Rigidbody myRigidbody;
-    //A check to see if a player has landed on a platform with the tag "grounded"
-    bool isGrounded = false;
+    bool isGrounded = false;        //to ensure player jumps only when 
 
     //gravity
     public float gravity = 100f;
@@ -26,14 +24,6 @@ public class PlayerMove : MonoBehaviour
     // Conditions for jumping, space bar to jump.
     void Update()
     {
-        /*if (Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
-        {
-            Jump();
-        }
-
-        //Rotation
-        Debug.Log("Rotation: "+ transform.rotation.ToEulerAngles());
-        Debug.Log("Forward: " + transform.forward);*/
     }
 
     //Move the player x or y axis
@@ -52,7 +42,7 @@ public class PlayerMove : MonoBehaviour
     void Run()
     {
         //Changed it from forceMode to ensure gravity still works when rigidbody moves
-        Vector3 moveDirection = (transform.right * moveInput.x + transform.forward * moveInput.y);//transform.up.normalized;
+        Vector3 moveDirection = (_cameraTransform.right * moveInput.x + _cameraTransform.forward * moveInput.y);//transform.up.normalized;
             //new Vector3(moveInput.x, 0f, moveInput.y).normalized;
         Vector3 newVelocity = new Vector3(
             moveDirection.x * walkSpeed,
