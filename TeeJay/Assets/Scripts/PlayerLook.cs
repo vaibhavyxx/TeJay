@@ -10,13 +10,11 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] Transform playerBody; 
     public float mouseSensitivity = 100f;
     float mouseX, mouseY;
+    float heightRotation = 0f;                          //to control how up and down can you look
 
-    float xRotation = 0f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
-    //When you click on the play screen, the cursor goes away so it won't disturb your viewing, click 'esc' to get the cursor back.
     void Start()
     {
+        //Hides cursor, press ESC to show it again
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -24,17 +22,19 @@ public class PlayerLook : MonoBehaviour
     // Now you rotate your view, look in all directions.
     void Update()
     {
-        //Gets values from X and Y 
-        mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-        Debug.Log("Rotation: "+ mouseX +", "+  mouseY);
+        // Get mouse input
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        //updates xRotation
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -minViewDistance, minViewDistance);
-        transform.localRotation = Quaternion.Euler(0f, xRotation, 0f);
-        Debug.Log("Transform's rotation: " + transform.localRotation);
-        playerBody.Rotate(playerBody.transform.up * mouseX); 
+        Debug.Log("Rotation Input: " + mouseX + ", " + mouseY);
+
+        // Update camera rotation (pitch)
+        heightRotation -= mouseY;
+        heightRotation = Mathf.Clamp(heightRotation, -minViewDistance, minViewDistance); // Clamp for looking up/down
+        transform.localRotation = Quaternion.Euler(heightRotation, 0f, 0f);
+
+        // Rotate player body (yaw)
+        //playerBody.Rotate(playerBody.transform.up * mouseX);
     }
 
     void onLook()
