@@ -47,8 +47,9 @@ public class PlayerMove : MonoBehaviour
             moveDirection.x * walkSpeed,
             myRigidbody.linearVelocity.y, 
             moveDirection.z * walkSpeed);
-        myRigidbody.linearVelocity = (newVelocity);
-        Debug.Log("rb velocity: " + myRigidbody.linearVelocity);
+        myRigidbody.linearVelocity = newVelocity;
+        Debug.Log("Move Direction: " + moveDirection);
+        Debug.Log("Player rotation: " + transform.rotation);
     }
 
     // Jump power for our player

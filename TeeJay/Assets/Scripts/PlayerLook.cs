@@ -9,6 +9,7 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] float minViewDistance = 25f;       //how down can you look
     [SerializeField] Transform playerBody; 
     public float mouseSensitivity = 100f;
+    float mouseX, mouseY;
 
     float xRotation = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,18 +25,19 @@ public class PlayerLook : MonoBehaviour
     void Update()
     {
         //Gets values from X and Y 
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        Debug.Log("Rotation: "+ mouseX +", "+  mouseY);
 
         //updates xRotation
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -minViewDistance, minViewDistance);
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(playerBody.transform.forward * mouseX); 
+        transform.localRotation = Quaternion.Euler(0f, xRotation, 0f);
+        Debug.Log("Transform's rotation: " + transform.localRotation);
+        playerBody.Rotate(playerBody.transform.up * mouseX); 
     }
 
     void onLook()
     {
-
     }
 }
