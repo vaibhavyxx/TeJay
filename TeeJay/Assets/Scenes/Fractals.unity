@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 20
-  jumpPower: 20
+  jumpPower: 30
   _cameraTransform: {fileID: 682477059}
   gravity: -5
 --- !u!54 &133353846

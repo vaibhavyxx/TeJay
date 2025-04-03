@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.InputSystem.LowLevel;
 //Code is based on video https://www.youtube.com/watch?v=o1bj-49uQ74
 
 public class PlayerMove : MonoBehaviour
@@ -16,6 +18,10 @@ public class PlayerMove : MonoBehaviour
     //gravity
     public float gravity = 100f;
     Time time = null;
+
+    //KeyControl for current and prev
+    KeyControl prevKB;
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();
@@ -25,21 +31,27 @@ public class PlayerMove : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
     // Conditions for jumping, space bar to jump.
+
+    //Jump keypress is here to ensure that we are able to get information
+    //from any frame when the user wants to jump
     void Update()
     {
+        KeyControl currentKB = Keyboard.current.spaceKey;
+        //Avoids infinite jump
+        if (currentKB.wasPressedThisFrame
+            && prevKB.isPressed
+            && isGrounded)
+        {
+            Jump();
+        }
+        ApplyGravity();
+        prevKB = currentKB;
     }
 
     //Move the player x or y axis
     void FixedUpdate() // Use FixedUpdate for physics calculations
     {
         Run();
-
-        //Avoids infinite jump
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
-        {
-            Jump();
-        }
-        ApplyGravity();
     }
 
     void Run()
