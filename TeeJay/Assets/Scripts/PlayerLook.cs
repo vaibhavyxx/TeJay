@@ -1,3 +1,5 @@
+//Not using it, using Cinemachine rotation instead
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,9 +34,6 @@ public class PlayerLook : MonoBehaviour
         heightRotation -= mouseY;
         heightRotation = Mathf.Clamp(heightRotation, -minViewDistance, minViewDistance); // Clamp for looking up/down
         transform.localRotation = Quaternion.Euler(heightRotation, 0f, 0f);
-
-        // Rotate player body (yaw)
-        //playerBody.Rotate(playerBody.transform.up * mouseX);
     }
 
     void onLook()

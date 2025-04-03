@@ -20,6 +20,9 @@ public class PlayerMove : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody>();
         //myRigidbody.freezeRotation = true; // Prevent unwanted rotation
+
+        //Hides cursor, press ESC to show it again
+        Cursor.lockState = CursorLockMode.Locked;
     }
     // Conditions for jumping, space bar to jump.
     void Update()
@@ -30,15 +33,15 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate() // Use FixedUpdate for physics calculations
     {
         Run();
-        ApplyGravity();
 
+        //Avoids infinite jump
         if (Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
         {
             Jump();
         }
+        ApplyGravity();
     }
 
-    // Our movement of x and y axis.
     void Run()
     {
         //Changed it from forceMode to ensure gravity still works when rigidbody moves
@@ -48,32 +51,37 @@ public class PlayerMove : MonoBehaviour
             myRigidbody.linearVelocity.y, 
             moveDirection.z * walkSpeed);
         myRigidbody.linearVelocity = newVelocity;
-        Debug.Log("Move Direction: " + moveDirection);
-        Debug.Log("Player rotation: " + transform.rotation);
     }
 
     // Jump power for our player
     void Jump()
     {
         myRigidbody.AddForce(transform.up * jumpPower, ForceMode.Impulse);
-        isGrounded = false;
+        Debug.Log("Jump");
+    }
+
+    //When the player jumps, sets the grounded to false
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Grounded"))
+        {
+            isGrounded = false;
+        }
     }
 
     // In order for the player to jump, the player must land on platform with the tage "Grounded". No infinite jumps.
     void OnCollisionStay(Collision collision) 
     {
-        
         if (collision.gameObject.CompareTag("Grounded")) 
         {
             isGrounded = true;
         }
     }
-
-    //shouldn't it be get context?
+    
+    //Get moveInput values from Input Action Reference
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        Debug.LogWarning("Move Input: " + moveInput);
         if(moveInput.magnitude > 1)
         {
             moveInput.Normalize();
@@ -87,11 +95,5 @@ public class PlayerMove : MonoBehaviour
         {
             myRigidbody.AddForce(Vector3.down * (Physics.gravity.y * gravity), ForceMode.Acceleration);
         }
-    }
-
-    //Updates direction's axis
-    private Vector3 newAxis()
-    {
-        return Vector3.zero;
     }
 }

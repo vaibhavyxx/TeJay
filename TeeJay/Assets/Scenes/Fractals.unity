@@ -262,9 +262,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 20
-  jumpPower: 30
+  jumpPower: 20
   _cameraTransform: {fileID: 682477059}
-  gravity: -15
+  gravity: -5
 --- !u!54 &133353846
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -290,7 +290,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 64
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &133353847
 MonoBehaviour:
@@ -1265,7 +1265,7 @@ Transform:
   m_GameObject: {fileID: 506091465}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 3.29, z: 2.89}
+  m_LocalPosition: {x: 0, y: 3.59, z: -2.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1324,7 +1324,6 @@ GameObject:
   - component: {fileID: 682477064}
   - component: {fileID: 682477063}
   - component: {fileID: 682477062}
-  - component: {fileID: 682477060}
   - component: {fileID: 682477065}
   m_Layer: 0
   m_Name: Main Camera
@@ -1342,27 +1341,12 @@ Transform:
   m_GameObject: {fileID: 682477058}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.9955967, z: 0, w: -0.0937407}
-  m_LocalPosition: {x: -0.0002714402, y: 3.2899935, z: 2.8899188}
+  m_LocalPosition: {x: -0.00013217067, y: 3.5900023, z: -2.2699635}
   m_LocalScale: {x: 0.2514395, y: 0.25143948, z: 0.2514395}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 133353840}
   m_LocalEulerAnglesHint: {x: 8.165, y: 193.008, z: -2.108}
---- !u!114 &682477060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682477058}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f9dc91c84e580843b750b0092bf7923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minViewDistance: 100
-  playerBody: {fileID: 133353840}
-  mouseSensitivity: 20
 --- !u!114 &682477062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3037,7 +3021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2027940417}
   - component: {fileID: 2027940416}
-  - component: {fileID: 2027940415}
+  - component: {fileID: 2027940418}
   - component: {fileID: 2027940414}
   - component: {fileID: 2027940413}
   m_Layer: 0
@@ -3059,7 +3043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89875cdc57c54474a8a74efd9b2a3b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScanRecursively: 1
+  ScanRecursively: 0
   SuppressInputWhileBlending: 1
   IgnoreTimeScale: 0
   m_ControllerManager:
@@ -3105,7 +3089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReferenceFrame: 0
-  RecenterTarget: 0
+  RecenterTarget: 1
   PanAxis:
     Value: 0
     Center: 0
@@ -3126,19 +3110,6 @@ MonoBehaviour:
       Wait: 1
       Time: 2
     Restrictions: 0
---- !u!114 &2027940415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027940412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36d1163fa822e8b418a0a603ec078d5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damping: 0
 --- !u!114 &2027940416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3191,12 +3162,25 @@ Transform:
   m_GameObject: {fileID: 2027940412}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1260.9332, y: 199.90746, z: 810.0484}
+  m_LocalPosition: {x: 1261.0525, y: 199.94461, z: 810.6762}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2027940418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027940412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d1163fa822e8b418a0a603ec078d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damping: 0
 --- !u!1 &2029460879
 GameObject:
   m_ObjectHideFlags: 0

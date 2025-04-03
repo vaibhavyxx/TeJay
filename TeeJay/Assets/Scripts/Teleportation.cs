@@ -15,6 +15,7 @@ public class Teleportation : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             player.transform.position = otherPortal.transform.position ;
+            Debug.Log("Entered portal");
         }
     }
     // Update is called once per frame
