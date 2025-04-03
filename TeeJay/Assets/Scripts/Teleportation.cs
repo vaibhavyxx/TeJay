@@ -2,23 +2,19 @@
 using UnityEngine;
 public class Teleportation : MonoBehaviour
 {
-    [SerializeField] GameObject otherPortal;
-    [SerializeField] GameObject player;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] Transform otherPortal;
+    [SerializeField] Transform player;
 
-    private void OnTriggerExit(Collider other)
+   
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            player.transform.position = otherPortal.transform.position ;
+            player.position = otherPortal.position;
             Debug.Log("Entered portal");
         }
     }
-    // Update is called once per frame
+
     void Update()
     {
         

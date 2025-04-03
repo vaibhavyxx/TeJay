@@ -14,11 +14,7 @@ public class PlayerMove : MonoBehaviour
     Vector2 moveInput;
     Rigidbody myRigidbody;
     bool isGrounded = false;        //to ensure player jumps only when 
-
-    //gravity
-    public float gravity = 100f;
-    Time time = null;
-
+    public float gravity = -5f;
     //KeyControl for current and prev
     KeyControl prevKB;
 
@@ -69,7 +65,6 @@ public class PlayerMove : MonoBehaviour
     void Jump()
     {
         myRigidbody.AddForce(transform.up * jumpPower, ForceMode.Impulse);
-        Debug.Log("Jump");
     }
 
     //When the player jumps, sets the grounded to false
