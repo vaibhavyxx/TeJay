@@ -5,8 +5,7 @@ public class Teleportation : MonoBehaviour
     [SerializeField] Transform otherPortal;
     [SerializeField] Transform player;
 
-   
-    private void OnTriggerStay(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
