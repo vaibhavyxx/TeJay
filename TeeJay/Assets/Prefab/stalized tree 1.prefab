@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: cffcd415a5b2efe43b5eb7298672d256, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 7694f284316735644b23180c00fb81b7, type: 2}
+      objectReference: {fileID: 2100000, guid: e3532d28535cb134cb37bf31d1f97a9a, type: 2}
     - target: {fileID: 919132149155446097, guid: cffcd415a5b2efe43b5eb7298672d256, type: 3}
       propertyPath: m_Name
       value: stalized tree 1
@@ -74,7 +74,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cffcd415a5b2efe43b5eb7298672d256, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8106177532512571175}
+      addedObject: {fileID: 8642071422007856785}
   m_SourcePrefab: {fileID: 100100000, guid: cffcd415a5b2efe43b5eb7298672d256, type: 3}
 --- !u!23 &675632789148641579 stripped
 MeshRenderer:
@@ -86,7 +86,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cffcd415a5b2efe43b5eb7298672d256, type: 3}
   m_PrefabInstance: {fileID: 2263142666327745094}
   m_PrefabAsset: {fileID: 0}
---- !u!205 &8106177532512571175
+--- !u!205 &8642071422007856785
 LODGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
