@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 133353845}
   - component: {fileID: 133353847}
   - component: {fileID: 133353848}
+  - component: {fileID: 133353849}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -586,6 +587,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &133353849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133353839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9855ead10498be4bb669f7c6fd1d906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 133353846}
+  speed: 50
 --- !u!1 &168175517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,7 +2036,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1271989296
 PrefabInstance:
@@ -2840,7 +2855,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1831591236
 GameObject:
@@ -3176,7 +3191,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2027940412
 GameObject:
