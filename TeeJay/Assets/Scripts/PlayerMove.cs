@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     public float gravity = -5f;
     //KeyControl for current and prev
     KeyControl prevKB;
+    ButtonControl prevButton;
 
     void Start()
     {
@@ -33,15 +34,18 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         KeyControl currentKB = Keyboard.current.spaceKey;
+        ButtonControl currentGP = Gamepad.current.aButton;
+        
         //Avoids infinite jump
-        if (currentKB.wasPressedThisFrame
-            && prevKB.isPressed
+        if (currentGP.wasPressedThisFrame
+            && prevButton.isPressed
             && isGrounded)
         {
             Jump();
         }
         ApplyGravity();
-        prevKB = currentKB;
+        //prevKB = currentKB;
+        prevButton = currentGP;
     }
 
     //Move the player x or y axis
@@ -62,7 +66,7 @@ public class PlayerMove : MonoBehaviour
     }
 
     // Jump power for our player
-    void Jump()
+    public void Jump()
     {
         myRigidbody.AddForce(transform.up * jumpPower, ForceMode.Impulse);
     }
