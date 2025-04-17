@@ -156,6 +156,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c0c6df4459a9424dbb04391bf30aebe, type: 3}
   m_PrefabInstance: {fileID: 1184025453}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &65294567
+GameObject:
+  m_ObjectHideFlags: 0
 --- !u!1 &69343975
 GameObject:
   m_ObjectHideFlags: 0
