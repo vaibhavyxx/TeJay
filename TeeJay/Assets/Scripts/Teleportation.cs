@@ -1,5 +1,6 @@
 //Helps in travelling from one portal to another
 using UnityEngine;
+
 public class Teleportation : MonoBehaviour
 {
     [SerializeField] Transform otherPortal;
@@ -7,15 +8,11 @@ public class Teleportation : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        
+
         if (other.gameObject.CompareTag("Player"))
         {
             player.position = otherPortal.position;
-            Debug.Log("Entered portal");
         }
-    }
-
-    void Update()
-    {
-        
     }
 }
