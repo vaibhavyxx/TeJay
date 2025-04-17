@@ -4,7 +4,7 @@ using UnityEngine;
 //Based on the video https://www.youtube.com/watch?v=Mic9ERhr0HA
 public class GameRespawn : MonoBehaviour
 {
-    //We set out threshold based on y-axis = -60
+   
     public float threshold;
 
     // Update is called once per frame
@@ -14,7 +14,9 @@ public class GameRespawn : MonoBehaviour
         //in the code.
         if(transform.position.y < threshold)
         {
-            transform.position = new Vector3(-323f, -46.55552f,-167.9565f);
+            Debug.Log("Player has fallen less then "+threshold);
+            transform.position = new Vector3(610.6f, -26.2f,-536.8f);
+            Debug.Log("Respawn point: "+transform.position.x + " "+ transform.position.y+ " "+ transform.position.z);
         }
     }
 }
