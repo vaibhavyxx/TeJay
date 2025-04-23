@@ -7,30 +7,30 @@ using UnityEngine.Pool;
 //The idea is if the user is within a certain radius, and they have pressed b
 //then the object would flag as grabbed
 //then the object, transform would be the new transform
+//Make sure that the gameobject this script is attached to, has a collider with trigger checked
 
 public class GrabController : MonoBehaviour
 {
-    public Transform grabObject;
-    public Rigidbody grabRigidBody;
-    public Transform grabTransform;
+    public Transform grabObject;                //grab object's coordinates
+    public Rigidbody grabRigidBody;             //grab object's rigidbody to enable/disable gravity
+    public Transform grabTransform;             //grabbed object is held at this coordinate
+
+    //Boolean flags to ensure they work properly
     bool isGrabbed = false;
     bool isTrigger = false;
+
+    //Takes in B and Y input for grab and drop
     ButtonControl currentInput;
-    ButtonControl dropInput;
+    ButtonControl yInput;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        currentInput = Gamepad.current.bButton;     //takes in value from each b button - to grab item
-        dropInput = Gamepad.current.yButton;        //to drop the item
+        currentInput = Gamepad.current.bButton;  //takes in value from each b button - to grab item
+        yInput = Gamepad.current.yButton;        //to drop the item
 
-        if (dropInput.isPressed)
+        //If the user presses y, the object's rigidbody is using gravity and it is
+        //detached from the player
+        if (yInput.isPressed)
         {
             grabRigidBody.useGravity = true;
             isGrabbed = false;
@@ -44,12 +44,15 @@ public class GrabController : MonoBehaviour
             grabRigidBody.useGravity = false;
         }
 
+        //if B is pressed, then it turns on grab boolean
         if(currentInput.isPressed)
         {
             isGrabbed=true;
         }
     }
 
+    //Checks for multiple frames to ensure we can get information about the collider
+    //whenever the object is pressed
     private void OnTriggerStay(Collider other)
     {
         //only grabs if the item is within the radius and the button is pressed
@@ -58,6 +61,5 @@ public class GrabController : MonoBehaviour
             isTrigger = true;
         }
     }
-
   
 }

@@ -139,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 3335370133641037390}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.9292327, z: 0, w: 0.36949506}
-  m_LocalPosition: {x: 0.000027673423, y: 3.5900023, z: -2.2700155}
+  m_LocalPosition: {x: -1235.8152, y: 1043.0995, z: -4704.3506}
   m_LocalScale: {x: 0.2514395, y: 0.25143948, z: 0.2514395}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,6 +319,106 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4280090343095987339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2259144110649336927}
+  - component: {fileID: 4044021110400359216}
+  - component: {fileID: 4935869663613941843}
+  - component: {fileID: 1221421445024163788}
+  m_Layer: 0
+  m_Name: Grab Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2259144110649336927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280090343095987339}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9292327, z: 0, w: 0.36949506}
+  m_LocalPosition: {x: 0, y: -1.33, z: 0}
+  m_LocalScale: {x: 17.552317, y: 17.552319, z: 17.552317}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 676156897301463987}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4044021110400359216
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280090343095987339}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4935869663613941843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280090343095987339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08bea894d04405e41a24cb7e7d2ddaaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabObject: {fileID: 0}
+  grabRigidBody: {fileID: 0}
+  grabTransform: {fileID: 6000017821856622416}
+--- !u!114 &1221421445024163788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280090343095987339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &5754118209213262583
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +519,7 @@ Transform:
   - {fileID: 3708277155386624832}
   - {fileID: 6059875067309490626}
   - {fileID: 6000017821856622416}
+  - {fileID: 2259144110649336927}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 136.631, z: 0}
 --- !u!54 &1053713209157211737
@@ -579,4 +680,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f5616822c3c7042857eef432f885fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transformPoint: {fileID: 0}
   threshold: -175
