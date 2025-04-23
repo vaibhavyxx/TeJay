@@ -36,15 +36,24 @@ public class PlayerMove : MonoBehaviour
         KeyControl currentKB = Keyboard.current.spaceKey;
         ButtonControl currentGP = Gamepad.current.aButton;
         
-        //Avoids infinite jump
+        //Avoids infinite jump 
+        //GamePad version
         if (currentGP.wasPressedThisFrame
             && prevButton.isPressed
             && isGrounded)
         {
             Jump();
         }
+        //Keyboard version - for debug
+        if (currentKB.wasPressedThisFrame
+            && prevKB.isPressed
+            && isGrounded)
+        {
+            Jump();
+        }
         ApplyGravity();
-        //prevKB = currentKB;
+
+        prevKB = currentKB;
         prevButton = currentGP;
     }
 
@@ -54,7 +63,7 @@ public class PlayerMove : MonoBehaviour
         Run();
     }
 
-    void Run()
+    public void Run()
     {
         //Changed it from forceMode to ensure gravity still works when rigidbody moves
         Vector3 moveDirection = (_cameraTransform.right * moveInput.x + _cameraTransform.forward * moveInput.y);//transform.up.normalized;
