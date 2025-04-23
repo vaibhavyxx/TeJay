@@ -16,6 +16,7 @@ public class GrabController : MonoBehaviour
     bool isGrabbed = false;
     bool isTrigger = false;
     ButtonControl currentInput;
+    ButtonControl dropInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,10 +27,18 @@ public class GrabController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentInput = Gamepad.current.bButton;     //takes in value from each b button
+        currentInput = Gamepad.current.bButton;     //takes in value from each b button - to grab item
+        dropInput = Gamepad.current.yButton;        //to drop the item
+
+        if (dropInput.isPressed)
+        {
+            grabRigidBody.useGravity = true;
+            isGrabbed = false;
+            isTrigger = false;
+        }
 
         //if it is certain radius, the user should grab it - stays in the air
-        if(isTrigger)
+        if (isTrigger)
         {
             grabObject.transform.position = grabTransform.position;
             grabRigidBody.useGravity = false;
@@ -39,7 +48,6 @@ public class GrabController : MonoBehaviour
         {
             isGrabbed=true;
         }
-
     }
 
     private void OnTriggerStay(Collider other)
