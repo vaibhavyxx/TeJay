@@ -5,17 +5,6 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public string sceneName;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     //Loads a new scene
     private void OnCollisionEnter(Collision collision)
@@ -27,6 +16,7 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
+    //From unity documentation
     IEnumerator LoadYourAsyncScene(string scene)
     {
         // The Application loads the Scene in the background as the current Scene runs.
