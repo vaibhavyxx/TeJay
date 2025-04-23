@@ -13,16 +13,8 @@ public class Teleportation : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("Collided with player");
-
-            //if (otherPortal)
-            {
-                player.position = otherPortal.position;
-            }
-            /*else
-            {
-                StartCoroutine(LoadYourAysncScene(sceneName));
-            }*/
+            player.position = otherPortal.position;
+            
         }
     }
 }

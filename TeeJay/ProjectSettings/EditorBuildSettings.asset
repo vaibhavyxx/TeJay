@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Introduction.unity
     guid: 48deb91c3faf83e44832d79712a27142
+  - enabled: 1
+    path: Assets/Scenes/Sunflower.unity
+    guid: 26d1a8282c2e50544a86f4a6e65bedea
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 00c5b5c3bc5b66b4fb852b9e17a7ff1b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
