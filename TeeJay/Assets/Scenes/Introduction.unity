@@ -312,27 +312,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 52.868576
+      value: 62.961185
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 52.868576
+      value: 62.961185
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 52.868576
+      value: 62.961185
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 482.12
+      value: 479.8
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.4
+      value: 64.599
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 465.17
+      value: 463.54
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Move the left joystick to move around.
+  m_text: Rotate the left joystick to move around.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2965,27 +2965,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 52.868576
+      value: 63.035473
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 52.868576
+      value: 63.035473
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 52.868576
+      value: 63.035473
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 481.3
+      value: 478.97
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.4
+      value: 64.579
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 490.05
+      value: 488.42
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3207,7 +3207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Move the right joystick to look around.
+  m_text: Rotate the right joystick to look around.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3634,7 +3634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -24.48, y: 1.56}
+  m_AnchoredPosition: {x: -28.19, y: 3.09}
   m_SizeDelta: {x: 181.19995, y: 434.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1684314825
@@ -5181,27 +5181,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 52.868576
+      value: 55.48557
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 52.868576
+      value: 55.48557
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 52.868576
+      value: 55.48557
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 476.19
+      value: 475.59
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 68.7
+      value: 67.974
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 477.61
+      value: 477.19
       objectReference: {fileID: 0}
     - target: {fileID: 8469216879515034161, guid: 488d4c5a3ad207d4ea662eef7fc03dc5, type: 3}
       propertyPath: m_LocalRotation.w
