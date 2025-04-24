@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
-using UnityEngine.Pool;
 
 //Grab mechanic to work with the controller
 //The idea is if the user is within a certain radius, and they have pressed b
@@ -12,6 +11,7 @@ public class GrabController : MonoBehaviour
 {
     Transform grabObject;                       //grab object's coordinates
     Rigidbody grabRigidBody;                    //grab object's rigidbody to enable/disable gravity
+    Rigidbody prevRigidBody;
     public Transform grabTransform;             //grabbed object is held at this coordinate
 
     //Boolean flags to ensure they work properly
@@ -21,7 +21,6 @@ public class GrabController : MonoBehaviour
     //Plays haptics to let user know if they have grabbed something
     bool playsHaptics = false;
     float timer = 0.0f;
-    float waitTime = 2.0f;
 
     //Takes in B and Y input for grab and drop
     ButtonControl currentInput;
@@ -37,9 +36,15 @@ public class GrabController : MonoBehaviour
         //detached from the player
         if (yInput.isPressed)
         {
-            grabRigidBody.useGravity = true;
+            if (grabRigidBody != null)
+            {
+                grabRigidBody.useGravity = true;
+            }
+
             isGrabbed = false;
             isTrigger = false;
+            prevRigidBody = null;
+            grabRigidBody = null;
         }
 
         //if it is certain radius, the user should grab it - stays in the air
@@ -56,6 +61,11 @@ public class GrabController : MonoBehaviour
         }
 
         //for haptics
+        if (prevRigidBody != grabRigidBody && grabRigidBody != null)
+        {
+            playsHaptics = true;
+        }
+
         FeelTriggers(0.25f);
     }
 
@@ -63,18 +73,14 @@ public class GrabController : MonoBehaviour
     //whenever the object is pressed
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Grab"))
+        if (other.gameObject.CompareTag("Grab") && isGrabbed)
         {
+            //only grabs if the item is within the radius and the button is pressed
             //identifies the object's transform and rb
+            prevRigidBody = grabRigidBody;
             grabObject = other.GetComponent<Transform>();
             grabRigidBody = other.GetComponent<Rigidbody>();
-
-            //only grabs if the item is within the radius and the button is pressed
-            if (isGrabbed)
-            {
-                isTrigger = true;
-                playsHaptics=true;
-            }
+            isTrigger = true;
         }
     }
 
