@@ -62,27 +62,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6274815822691234771, guid: fa4c1396f11155e4aaa5f3d56c7b30a9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2045
+      value: 0.2579972
       objectReference: {fileID: 0}
     - target: {fileID: -6274815822691234771, guid: fa4c1396f11155e4aaa5f3d56c7b30a9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2045
+      value: 0.2579972
       objectReference: {fileID: 0}
     - target: {fileID: -6274815822691234771, guid: fa4c1396f11155e4aaa5f3d56c7b30a9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2045
+      value: 0.2579972
       objectReference: {fileID: 0}
     - target: {fileID: -6274815822691234771, guid: fa4c1396f11155e4aaa5f3d56c7b30a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.887
+      value: 15.751
       objectReference: {fileID: 0}
     - target: {fileID: -6274815822691234771, guid: fa4c1396f11155e4aaa5f3d56c7b30a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 90.967
+      value: -7.8
       objectReference: {fileID: 0}
     - target: {fileID: -6274815822691234771, guid: fa4c1396f11155e4aaa5f3d56c7b30a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.9812
+      value: -1.8479
       objectReference: {fileID: 0}
     - target: {fileID: -6167989143930585569, guid: fa4c1396f11155e4aaa5f3d56c7b30a9, type: 3}
       propertyPath: m_ScaleInLightmap
@@ -126,19 +126,19 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.6
+  - screenRelativeHeight: 0.000011470994
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6943288135480038211}
-  - screenRelativeHeight: 0.3
+  - screenRelativeHeight: 0.000005735497
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6943288135480038211}
-  - screenRelativeHeight: 0.1
+  - screenRelativeHeight: 0.0000019118322
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6943288135480038211}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!1 &5114977131779641357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa4c1396f11155e4aaa5f3d56c7b30a9, type: 3}
@@ -152,8 +152,8 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5114977131779641357}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: 21.228184, y: 114.35205, z: -2.4905214}
-  m_Size: 46.77011
+  m_LocalReferencePoint: {x: 21.228218, y: 11.285059, z: -2.4905205}
+  m_Size: 46.770115
   m_FadeMode: 0
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
