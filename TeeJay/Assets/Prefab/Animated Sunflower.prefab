@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 3824771333298902822}
   - component: {fileID: 1871734726320317402}
   m_Layer: 0
-  m_Name: Sunflower Transform
+  m_Name: Animated Sunflower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
