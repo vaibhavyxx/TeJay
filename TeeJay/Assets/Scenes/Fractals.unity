@@ -6584,30 +6584,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.191858
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.441089
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -140
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4228214523374841970, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
       propertyPath: m_Name
       value: Sunflower Transform
@@ -6657,17 +6633,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
---- !u!95 &2134759514 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1871734726320317402, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
-  m_PrefabInstance: {fileID: 2134759513}
-  m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> 64da3c7c1970a04fda577219318614f76a38f142
->>>>>>> Stashed changes
 --- !u!1 &2140889811
 GameObject:
   m_ObjectHideFlags: 0
@@ -8321,16 +8286,8 @@ PlayableDirector:
     value: {fileID: 5844278392597397715}
   - key: {fileID: 2504181021848821506, guid: c0fc7d36d3ae0fa42bd82b76caf2364e, type: 2}
     value: {fileID: 931955726148781796}
-<<<<<<< HEAD
-  - key: {fileID: 4670205920207335411, guid: c0fc7d36d3ae0fa42bd82b76caf2364e, type: 2}
-    value: {fileID: 2134759514}
-=======
   - key: {fileID: -608608217223595842, guid: c0fc7d36d3ae0fa42bd82b76caf2364e, type: 2}
     value: {fileID: 0}
-<<<<<<< Updated upstream
-=======
->>>>>>> 64da3c7c1970a04fda577219318614f76a38f142
->>>>>>> Stashed changes
   m_ExposedReferences:
     m_References: []
 --- !u!1 &6946113380236318695
