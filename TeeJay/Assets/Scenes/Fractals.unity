@@ -6584,6 +6584,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -138.9
+      objectReference: {fileID: 0}
     - target: {fileID: 4228214523374841970, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
       propertyPath: m_Name
       value: Sunflower Transform
@@ -6631,8 +6639,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2511511150977830234, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2134759516}
   m_SourcePrefab: {fileID: 100100000, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+--- !u!1 &2134759514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2511511150977830234, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+  m_PrefabInstance: {fileID: 2134759513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2134759515 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1871734726320317402, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+  m_PrefabInstance: {fileID: 2134759513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!320 &2134759516
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134759514}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 2a673c1abf828084fa0b1815dbcf3038, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 7179251756922594318, guid: 2a673c1abf828084fa0b1815dbcf3038, type: 2}
+    value: {fileID: 2134759515}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &2140889811
 GameObject:
   m_ObjectHideFlags: 0
