@@ -8,6 +8,7 @@ TagManager:
   - Portal
   - Grab
   - Plant
+  - Drop
   layers:
   - Default
   - TransparentFX
