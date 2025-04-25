@@ -40,6 +40,7 @@ public class GrabController : MonoBehaviour
             if (grabRigidBody != null)
             {
                 grabRigidBody.useGravity = true;
+                grabRigidBody.detectCollisions = true;
             }
 
             isGrabbed = false;
@@ -82,6 +83,7 @@ public class GrabController : MonoBehaviour
             grabObject = other.GetComponent<Transform>();
             grabRigidBody = other.GetComponent<Rigidbody>();
             isTrigger = true;
+            grabRigidBody.detectCollisions = false;
         }
     }
 
