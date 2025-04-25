@@ -11,24 +11,31 @@ public class SpawnFlower : MonoBehaviour
     GameObject seed;
     public GameObject flower;           //any flower ideally with animation on start turned on
     bool toSpawn = false;
+    float randomScale = 0.0f;
+    public float ySpawnCoordinate = 76.5f;      //where flower should be spawned
+    private void Start()
+    {
+        randomScale = Random.Range(0.0f, 0.5f);
+        flowerTransform.transform.localScale = new Vector3 (randomScale, randomScale, randomScale);
+    }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag(tagName))
         {
-            seed = other.GetComponent<GameObject>();
+            seed = other.gameObject;
             //Get the coordinates from the seed to grow the sunflower in those coordinates
             flowerTransform = seed.transform; 
 
             Destroy(seed);             //destroys the seed itself
-            //Destroy(seed);    //and its grab point
             toSpawn = true;
         }
 
         //Grows flower
         if(toSpawn)
         {
-            Instantiate(flower, this.transform.position, Quaternion.identity);
+            Vector3 vec3 = new Vector3(flowerTransform.position.x, ySpawnCoordinate, flowerTransform.position.z);
+            Instantiate(flower, vec3, Quaternion.identity);
             toSpawn= false;
             Debug.Log("should spawn flower");
         }

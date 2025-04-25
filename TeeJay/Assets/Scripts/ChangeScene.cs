@@ -22,9 +22,14 @@ public class ChangeScene : MonoBehaviour
     private void Update()
     {
         resetButton = Gamepad.current.xButton;
-        if(resetButton.isPressed )
+        
+        //Resets it back to intro scene for new players
+        if(SceneManager.GetActiveScene().name != "Introduction")
         {
-            StartCoroutine (LoadYourAsyncScene("Introduction"));
+            if (resetButton.isPressed)
+            {
+                StartCoroutine(LoadYourAsyncScene("Introduction"));
+            }
         }
     }
 

@@ -28,6 +28,7 @@ public class GrabController : MonoBehaviour
 
     void Update()
     {
+
         //timer += Time.deltaTime;                 //for timing haptics
         currentInput = Gamepad.current.bButton;  //takes in value from each b button - to grab item
         yInput = Gamepad.current.yButton;        //to drop the item
