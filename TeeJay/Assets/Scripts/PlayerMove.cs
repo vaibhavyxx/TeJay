@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
     //KeyControl for current and prev
     KeyControl prevKB;
     ButtonControl prevButton;
+    StickControl moveButton;
 
     void Start()
     {

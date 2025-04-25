@@ -12,7 +12,7 @@ public class SpawnFlower : MonoBehaviour
     public GameObject flower;           //any flower ideally with animation on start turned on
     bool toSpawn = false;
     float randomScale = 0.0f;
-    public float ySpawnCoordinate = 76.5f;      //where flower should be spawned
+    public Transform coordinatetoSpawm;      //where flower should be spawned
     private void Start()
     {
         randomScale = Random.Range(0.0f, 0.5f);
@@ -34,8 +34,7 @@ public class SpawnFlower : MonoBehaviour
         //Grows flower
         if(toSpawn)
         {
-            Vector3 vec3 = new Vector3(flowerTransform.position.x, ySpawnCoordinate, flowerTransform.position.z);
-            Instantiate(flower, vec3, Quaternion.identity);
+            Instantiate(flower, coordinatetoSpawm.position, coordinatetoSpawm.rotation);
             toSpawn= false;
             Debug.Log("should spawn flower");
         }

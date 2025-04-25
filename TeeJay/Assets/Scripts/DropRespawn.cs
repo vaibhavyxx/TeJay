@@ -11,9 +11,9 @@ public class DropRespawn : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Drop"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            this.transform.position = respawnTransform.position;
+            other.gameObject.transform.position = respawnTransform.position;
         }
     }
 }
