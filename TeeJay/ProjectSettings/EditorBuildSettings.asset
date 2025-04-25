@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/James Sunflower.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Fractals.unity
-    guid: e8c55ce22a35c594b80204ddef6d71e8
-  - enabled: 1
     path: Assets/Scenes/Introduction.unity
     guid: 48deb91c3faf83e44832d79712a27142
   - enabled: 1
+    path: Assets/Scenes/Fractals.unity
+    guid: e8c55ce22a35c594b80204ddef6d71e8
+  - enabled: 1
     path: Assets/Scenes/Sunflower.unity
     guid: 26d1a8282c2e50544a86f4a6e65bedea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Aloe Vera.unity
     guid: cc3da36144621b74c8a5464ab8f76d19
   m_configObjects:

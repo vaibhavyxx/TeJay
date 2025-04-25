@@ -37,7 +37,7 @@ public class PlayerMove : MonoBehaviour
     //from any frame when the user wants to jump
     void Update()
     {
-        KeyControl currentKB = Keyboard.current.spaceKey;
+        //KeyControl currentKB = Keyboard.current.spaceKey;
         ButtonControl currentGP = Gamepad.current.aButton;
         
         //Avoids infinite jump 
@@ -48,16 +48,9 @@ public class PlayerMove : MonoBehaviour
         {
             Jump();
         }
-        //Keyboard version - for debug
-        if (currentKB.wasPressedThisFrame
-            && prevKB.isPressed
-            && isGrounded)
-        {
-            Jump();
-        }
         ApplyGravity();
 
-        prevKB = currentKB;
+        //prevKB = currentKB;
         prevButton = currentGP;
     }
 
