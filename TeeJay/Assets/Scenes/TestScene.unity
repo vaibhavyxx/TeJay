@@ -356,38 +356,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &546788252
-GameObject:
+--- !u!1001 &484566895
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 546788253}
-  m_Layer: 6
-  m_Name: Seed Grab Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &546788253
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546788252}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 449.7, y: 0.7946, z: 479.9}
-  m_LocalScale: {x: 1.6724873, y: 1.5202575, z: 1.6724873}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 991845480}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2511511150977830234, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_Name
+      value: Animated Sunflower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 467.8268
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.4752502
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 546.4412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.69156945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.72230995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 233.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854523037324535065, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+--- !u!95 &484566896 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1871734726320317402, guid: 15a11ef2393ec1b4eb4290d571ffb343, type: 3}
+  m_PrefabInstance: {fileID: 484566895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &648901306 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4564510702391736991, guid: 12e93c7220dec8d40a7ad6df5dd55ec3, type: 3}
@@ -524,11 +554,11 @@ Transform:
   m_GameObject: {fileID: 991845475}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7034, z: 0.65701294}
-  m_LocalScale: {x: 0.8392086, y: 0.8392086, z: 0.8392086}
+  m_LocalPosition: {x: 449.7, y: 3.3842065, z: 480.99884}
+  m_LocalScale: {x: 1.4035656, y: 1.2758131, z: 1.4035656}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 546788253}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &991845481
 BoxCollider:
@@ -901,6 +931,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6000017821856622416, guid: 12e93c7220dec8d40a7ad6df5dd55ec3, type: 3}
   m_PrefabInstance: {fileID: 1427903341}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1463745342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1463745344}
+  - component: {fileID: 1463745343}
+  m_Layer: 0
+  m_Name: Sunflower TransformTimeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1463745343
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463745342}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 2a673c1abf828084fa0b1815dbcf3038, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 7179251756922594318, guid: 2a673c1abf828084fa0b1815dbcf3038, type: 2}
+    value: {fileID: 484566896}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1463745344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463745342}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 388, y: 0, z: 452}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1525176146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6059875067309490626, guid: 12e93c7220dec8d40a7ad6df5dd55ec3, type: 3}
@@ -1028,7 +1109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Grab
-  seed: {fileID: 546788252}
+  seed: {fileID: 991845475}
   flower: {fileID: 8114300616161186483, guid: 622bb05bbc207ad499345d8cb5c746f3, type: 3}
 --- !u!1 &1923114118
 GameObject:
@@ -1367,6 +1448,8 @@ SceneRoots:
   - {fileID: 338893050}
   - {fileID: 1427903341}
   - {fileID: 1923114126}
-  - {fileID: 546788253}
+  - {fileID: 991845480}
   - {fileID: 368270358}
   - {fileID: 1608810747}
+  - {fileID: 1463745344}
+  - {fileID: 484566895}

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 996465562142114165}
-  - component: {fileID: 6100142520636917168}
   m_Layer: 0
   m_Name: sunflower
   m_TagString: Untagged
@@ -26,40 +25,13 @@ Transform:
   m_GameObject: {fileID: 224113810927982832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -52.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.35469, y: 0.35469, z: 0.35469}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6617818709116355970}
   m_Father: {fileID: 3854523037324535065}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &6100142520636917168
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224113810927982832}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 21.228584, y: 154.58499, z: -2.4903212}
-  m_Size: 46.77014
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.6
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1915131619900624970}
-  - screenRelativeHeight: 0.3
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1915131619900624970}
-  - screenRelativeHeight: 0.1
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1915131619900624970}
-  m_Enabled: 1
 --- !u!1 &2511511150977830234
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,12 +41,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3854523037324535065}
-  - component: {fileID: 3824771333298902822}
   - component: {fileID: 1871734726320317402}
+  - component: {fileID: 6715376000578157402}
   m_Layer: 0
   m_Name: Animated Sunflower
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -87,40 +59,13 @@ Transform:
   m_GameObject: {fileID: 2511511150977830234}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.72230995, z: -0, w: -0.69156945}
-  m_LocalPosition: {x: -383, y: -106.7, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.1918577, y: 2.4410892, z: 2.5860555}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 996465562142114165}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 233.768, z: 0}
---- !u!205 &3824771333298902822
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511511150977830234}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 7.529553, y: 2.429778, z: -0.8832778}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.0021803014
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1915131619900624970}
-  - screenRelativeHeight: 0.0010901507
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1915131619900624970}
-  - screenRelativeHeight: 0.00036338353
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1915131619900624970}
-  m_Enabled: 1
 --- !u!95 &1871734726320317402
 Animator:
   serializedVersion: 7
@@ -143,6 +88,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!320 &6715376000578157402
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511511150977830234}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 2a673c1abf828084fa0b1815dbcf3038, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 7179251756922594318, guid: 2a673c1abf828084fa0b1815dbcf3038, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &6442476457432288197
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +118,6 @@ GameObject:
   - component: {fileID: 6617818709116355970}
   - component: {fileID: 4292544292215248222}
   - component: {fileID: 1915131619900624970}
-  - component: {fileID: 1477490426972445276}
   m_Layer: 0
   m_Name: extrudedSurface2
   m_TagString: Untagged
@@ -171,7 +134,7 @@ Transform:
   m_GameObject: {fileID: 6442476457432288197}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.887, y: 131.2, z: -1.9812}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2045, y: 0.2045, z: 0.2045}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -230,30 +193,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!205 &1477490426972445276
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6442476457432288197}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 21.232368, y: 114.352356, z: -2.4886093}
-  m_Size: 228.70471
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.6
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1915131619900624970}
-  - screenRelativeHeight: 0.3
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1915131619900624970}
-  - screenRelativeHeight: 0.1
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1915131619900624970}
-  m_Enabled: 0
