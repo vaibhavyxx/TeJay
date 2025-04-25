@@ -12,14 +12,14 @@ public class SpawnFlower : MonoBehaviour
     public GameObject flower;           //any flower ideally with animation on start turned on
     bool toSpawn = false;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag(tagName))
         {
             //Get the coordinates from the seed to grow the sunflower in those coordinates
             flowerTransform = seed.transform; 
 
-            //Destroy(seed);             //destroys the seed itself
+            Destroy(seed);             //destroys the seed itself
             //Destroy(seed);    //and its grab point
             toSpawn = true;
         }
@@ -27,8 +27,9 @@ public class SpawnFlower : MonoBehaviour
         //Grows flower
         if(toSpawn)
         {
-            Instantiate(flower, flowerTransform);
+            Instantiate(flower, this.transform.position, Quaternion.identity);
             toSpawn= false;
+            Debug.Log("should spawn flower");
         }
     }
 }
