@@ -8,6 +8,7 @@ using UnityEngine.InputSystem.LowLevel;
 
 public class PlayerMove : MonoBehaviour
 {
+    //[SerializeField] Transform initialPoint;    //starting point
     [SerializeField] float walkSpeed = 15f;
     [SerializeField] float jumpPower = 15f;
     [SerializeField] Transform _cameraTransform;
@@ -26,6 +27,8 @@ public class PlayerMove : MonoBehaviour
 
         //Hides cursor, press ESC to show it again
         Cursor.lockState = CursorLockMode.Locked;
+
+        //this.transform.position = initialPoint.position;
     }
     // Conditions for jumping, space bar to jump.
 
@@ -72,6 +75,8 @@ public class PlayerMove : MonoBehaviour
             myRigidbody.linearVelocity.y, 
             moveDirection.z * walkSpeed);
         myRigidbody.linearVelocity = newVelocity;
+
+        Debug.Log("Calls run");
     }
 
     // Jump power for our player

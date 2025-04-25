@@ -8,14 +8,15 @@ public class SpawnFlower : MonoBehaviour
 {
     Transform flowerTransform;
     public string tagName;
-    public GameObject seed;
+    GameObject seed;
     public GameObject flower;           //any flower ideally with animation on start turned on
     bool toSpawn = false;
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag(tagName))
         {
+            seed = other.GetComponent<GameObject>();
             //Get the coordinates from the seed to grow the sunflower in those coordinates
             flowerTransform = seed.transform; 
 
