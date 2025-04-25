@@ -1,9 +1,13 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
+//Also lets you reset to onboarding scene
 public class ChangeScene : MonoBehaviour
 {
+    ButtonControl resetButton;
     public string sceneName;
 
     //Loads a new scene
@@ -13,6 +17,14 @@ public class ChangeScene : MonoBehaviour
         {
             //SceneManager.LoadScene(sceneName);
             StartCoroutine(LoadYourAsyncScene(sceneName));
+        }
+    }
+    private void Update()
+    {
+        resetButton = Gamepad.current.xButton;
+        if(resetButton.isPressed )
+        {
+            StartCoroutine (LoadYourAsyncScene("Introduction"));
         }
     }
 
